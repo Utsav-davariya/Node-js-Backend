@@ -1,2 +1,2 @@
-export const DB_NAME  = "MyFullBackend";
+export const DB_NAME  = "FullBackend";
 
