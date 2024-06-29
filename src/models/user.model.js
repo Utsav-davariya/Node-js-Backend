@@ -53,7 +53,7 @@ const userSchema = new Schema(
 userSchema.pre("save", async function (next) { // use normal function becuse of this. is not access in arrow () => {}
     if (!this.isModified("password")) return next() // if password is not modified it can not save second time or otherwise encrypt the  password and save it
 
-    this.password = bcrypt.hash(this.password, 10)// encrypt password
+    this.password = await bcrypt.hash(this.password, 10)// encrypt password
     next()
 })
 
