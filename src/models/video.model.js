@@ -9,7 +9,7 @@ const videoSchema = new Schema(
             required: true,
         },
         thumbnail: {
-            type: String,
+            type: String, // coudinary url
             required: true
         },
         title: {
